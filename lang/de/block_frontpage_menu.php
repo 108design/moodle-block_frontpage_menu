@@ -1,0 +1,20 @@
+<?php
+$string['pluginname'] = 'Frontpage-Menü';
+$string['title'] = 'Blocktitel';
+$string['menu'] = 'Menüquelle';
+$string['style'] = 'Menüstil';
+$string['padding'] = 'Menüabstand';
+$string['density'] = 'Kompaktheit';
+$string['fixedstyle'] = 'Kompaktes Blockmenü';
+$string['invalidsource'] = 'Die gewählte Menüquelle ist nicht mehr verfügbar.';
+$string['sourcecentral'] = 'Zentral';
+$string['sourcesegment'] = 'Segment';
+$string['sourcelinkedsegment'] = 'Verknüpftes Segment';
+$string['configuresource'] = 'Menü konfigurieren';
+$string['configure'] = 'Block konfigurieren';
+$string['notconfigured'] = 'Für diesen Block wurde noch kein Frontpage-Menü ausgewählt.';
+$string['novisibleentries'] = 'Das ausgewählte Menü hat in der aktuellen Ansicht keine sichtbaren Einträge.';
+$string['frontpageunavailable'] = 'Die Frontpage-Menüintegration ist derzeit nicht verfügbar.';
+$string['privacy:metadata'] = 'Der Frontpage-Menüblock speichert keine personenbezogenen Daten.';
+$string['frontpage_menu:addinstance'] = 'Frontpage-Menüblock hinzufügen';
+$string['frontpage_menu:myaddinstance'] = 'Frontpage-Menüblock zum Dashboard hinzufügen';
