@@ -85,13 +85,13 @@ final class block_frontpage_menu extends block_base {
         $linklabel = get_string('configuresource', 'block_frontpage_menu');
         return html_writer::div(
             html_writer::div(
-                html_writer::span($label, 'badge text-bg-secondary')
+                html_writer::span($label, 'badge badge-secondary')
                 . html_writer::span(format_string($sourceinfo['name']), 'text-truncate'),
-                'd-flex align-items-center gap-2 min-w-0'
+                'd-flex align-items-center block-frontpage-menu-gap-2 block-frontpage-menu-min-w-0'
             )
             . html_writer::link($sourceinfo['editurl'],
                 $OUTPUT->pix_icon('t/edit', '') . html_writer::span($linklabel), [
-                    'class' => 'small d-inline-flex align-items-center gap-1 mt-2',
+                    'class' => 'small d-inline-flex align-items-center block-frontpage-menu-gap-1 mt-2',
                 ]),
             'local-frontpage-menu-block-source border-top pt-2 mt-2 text-muted small'
         );

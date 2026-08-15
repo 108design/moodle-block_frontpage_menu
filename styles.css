@@ -1,3 +1,15 @@
+.block-frontpage-menu-gap-1 {
+    gap: .25rem !important;
+}
+
+.block-frontpage-menu-gap-2 {
+    gap: .5rem !important;
+}
+
+.block-frontpage-menu-min-w-0 {
+    min-width: 0 !important;
+}
+
 .block_frontpage_menu .local-frontpage-menu-navigation,
 .block_frontpage_menu .local-frontpage-menu-style-floating .local-frontpage-menu-navigation {
     display: block;
