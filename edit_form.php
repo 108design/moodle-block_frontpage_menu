@@ -4,6 +4,9 @@ defined('MOODLE_INTERNAL') || die();
 /** Instance settings for a freely placed canonical Frontpage menu. */
 final class block_frontpage_menu_edit_form extends block_edit_form {
     protected function specific_definition($mform): void {
+        \local_frontpage\local\licensing\gate::require(
+            \local_frontpage\local\licensing\gate::MENUS_AUTHORING
+        );
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
         $mform->addElement('text', 'config_title', get_string('title', 'block_frontpage_menu'), [
             'maxlength' => 255,
