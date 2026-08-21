@@ -18,10 +18,10 @@ final class block_frontpage_menu extends block_base {
     }
 
     public function instance_config_save($data, $nolongerused = false) {
-        if (empty($data->menusource) && !empty($data->menuid)) {
-            $data->menusource = 'central:' . (int) $data->menuid;
+        unset($data->style); // Remove the pre-Phase-A legacy field; profile is the current presentation contract.
+        if (($data->profile ?? '') === 'course-explorer') {
+            $data->profile = 'wide';
         }
-        unset($data->menuid, $data->style);
         return parent::instance_config_save($data, $nolongerused);
     }
 
@@ -44,8 +44,7 @@ final class block_frontpage_menu extends block_base {
             );
             return $this->content;
         }
-        $source = trim((string) ($this->config->menusource
-            ?? (!empty($this->config->menuid) ? 'central:' . (int) $this->config->menuid : '')));
+        $source = trim((string) ($this->config->menusource ?? ''));
         if ($source === '') {
             $this->content->text = $this->editing_placeholder(
                 get_string('notconfigured', 'block_frontpage_menu')
@@ -53,19 +52,14 @@ final class block_frontpage_menu extends block_base {
             return $this->content;
         }
         $PAGE->requires->js_call_amd('local_frontpage/menu', 'init');
-        $options = ['style' => 'block', 'padding' => (string) ($this->config->padding ?? 'compact'),
+        $storedprofile = (string) ($this->config->profile ?? '');
+        $profile = $storedprofile === 'course-explorer' ? 'wide'
+            : (in_array($storedprofile, ['compact', 'wide'], true) ? $storedprofile : 'compact');
+        $options = ['style' => $profile === 'wide' ? 'secondary' : 'block',
+            'padding' => (string) ($this->config->padding ?? 'compact'),
             'label' => $this->title];
-        if (method_exists(\local_frontpage\menu::class, 'render_source')) {
-            $sourceinfo = \local_frontpage\menu::source_info($source);
-            $rendered = \local_frontpage\menu::render_source($source, $options);
-        } else {
-            $menuid = preg_match('/^central:([1-9][0-9]*)$/', $source, $match) ? (int) $match[1] : 0;
-            $sourceinfo = $menuid > 0 ? [
-                'type' => 'central', 'name' => get_string('sourcecentral', 'block_frontpage_menu'),
-                'editurl' => (new moodle_url('/local/frontpage/menu_edit.php', ['id' => $menuid]))->out(false),
-            ] : null;
-            $rendered = \local_frontpage\menu::render($menuid, $options);
-        }
+        $sourceinfo = \local_frontpage\menu::source_info($source);
+        $rendered = \local_frontpage\menu::render_source($source, $options);
         $this->content->text = trim($rendered) !== '' ? $rendered : $this->editing_placeholder(
             get_string('novisibleentries', 'block_frontpage_menu')
         );
