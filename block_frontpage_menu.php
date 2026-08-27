@@ -38,7 +38,7 @@ final class block_frontpage_menu extends block_base {
         $this->content = new stdClass();
         $this->content->text = '';
         $this->content->footer = '';
-        if (!class_exists(\local_frontpage\menu::class)) {
+        if (!\block_frontpage_menu\local\authority::available()) {
             $this->content->text = $this->editing_placeholder(
                 get_string('frontpageunavailable', 'block_frontpage_menu')
             );
@@ -51,19 +51,23 @@ final class block_frontpage_menu extends block_base {
             );
             return $this->content;
         }
-        $PAGE->requires->js_call_amd('local_frontpage/menu', 'init');
         $storedprofile = (string) ($this->config->profile ?? '');
         $profile = $storedprofile === 'course-explorer' ? 'wide'
             : (in_array($storedprofile, ['compact', 'wide'], true) ? $storedprofile : 'compact');
         $options = ['style' => $profile === 'wide' ? 'secondary' : 'block',
             'padding' => (string) ($this->config->padding ?? 'compact'),
             'label' => $this->title];
-        $sourceinfo = \local_frontpage\menu::source_info($source);
-        $rendered = \local_frontpage\menu::render_source($source, $options);
+        $sourceinfo = \block_frontpage_menu\local\authority::source_info($source);
+        $amdcomponent = (string) ($sourceinfo['authority'] ??
+            \block_frontpage_menu\local\authority::amd_component());
+        if ($amdcomponent !== '') {
+            $PAGE->requires->js_call_amd($amdcomponent . '/menu', 'init');
+        }
+        $rendered = \block_frontpage_menu\local\authority::render_source($source, $options);
         $this->content->text = trim($rendered) !== '' ? $rendered : $this->editing_placeholder(
             get_string('novisibleentries', 'block_frontpage_menu')
         );
-        if ($sourceinfo !== null && has_capability('local/frontpage:managepages', context_system::instance())) {
+        if ($sourceinfo !== null && \block_frontpage_menu\local\authority::can_manage()) {
             $this->content->footer = $this->source_footer($sourceinfo);
         }
         return $this->content;

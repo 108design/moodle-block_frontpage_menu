@@ -24,3 +24,7 @@ $string['frontpageunavailable'] = 'Die Frontpage-Menüintegration ist derzeit ni
 $string['privacy:metadata'] = 'Der Frontpage-Menüblock speichert keine personenbezogenen Daten.';
 $string['frontpage_menu:addinstance'] = 'Frontpage-Menüblock hinzufügen';
 $string['frontpage_menu:myaddinstance'] = 'Frontpage-Menüblock zum Dashboard hinzufügen';
+$string['authorityunavailable'] = 'Installieren Sie Frontpage oder den eigenständigen Menübuilder, bevor Sie diesen Block konfigurieren.';
+$string['paddingcompact'] = 'Kompakt';
+$string['paddingnormal'] = 'Normal';
+$string['paddingspacious'] = 'Großzügig';

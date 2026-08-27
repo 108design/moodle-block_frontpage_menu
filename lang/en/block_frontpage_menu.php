@@ -24,3 +24,7 @@ $string['frontpageunavailable'] = 'The Frontpage menu integration is currently u
 $string['privacy:metadata'] = 'The Frontpage menu block stores no personal data.';
 $string['frontpage_menu:addinstance'] = 'Add a Frontpage menu block';
 $string['frontpage_menu:myaddinstance'] = 'Add a Frontpage menu block to Dashboard';
+$string['authorityunavailable'] = 'Install either Frontpage or the standalone Menu Builder before configuring this block.';
+$string['paddingcompact'] = 'Compact';
+$string['paddingnormal'] = 'Normal';
+$string['paddingspacious'] = 'Spacious';
