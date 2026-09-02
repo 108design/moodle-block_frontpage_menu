@@ -1,6 +1,4 @@
 <?php
-$string['licensepolicyproduct'] = 'Menu builder';
-$string['licensepolicyitem'] = 'Block configuration';
 $string['pluginname'] = 'Frontpage menu';
 $string['title'] = 'Block title';
 $string['menu'] = 'Menu source';
