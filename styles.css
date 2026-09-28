@@ -95,13 +95,18 @@
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-link,
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger {
     flex: 1 1 auto;
+    justify-content: flex-start;
+    text-align: start;
 }
 
-.block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger {
+.block_frontpage_menu.block .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger {
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-inline-end: 0 !important;
     width: 100%;
 }
+.block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger
+    > .local-frontpage-menu-chevron { margin-inline-start: auto; }
 
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-submenu-toggle,
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger
@@ -119,7 +124,9 @@
 }
 
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-control
-    > .local-frontpage-menu-submenu-toggle {
+    > .local-frontpage-menu-submenu-toggle,
+.block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger
+    > .local-frontpage-menu-chevron {
     align-self: center;
     background: color-mix(in oklch, var(--bs-secondary-bg, #e9ecef) 82%, transparent) !important;
     border: 1px solid color-mix(in oklch, currentColor 20%, transparent) !important;
@@ -285,13 +292,18 @@
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-link,
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger {
     flex: 1 1 auto;
+    justify-content: flex-start;
+    text-align: start;
 }
 
-.block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger {
+.block_frontpage_menu.block .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger {
     box-sizing: border-box;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-inline-end: 0 !important;
     width: 100%;
 }
+.block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger
+    > .local-menubuilder-menu-chevron { margin-inline-start: auto; }
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-submenu-toggle,
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger
@@ -309,7 +321,9 @@
 }
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-control
-    > .local-menubuilder-menu-submenu-toggle {
+    > .local-menubuilder-menu-submenu-toggle,
+.block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger
+    > .local-menubuilder-menu-chevron {
     align-self: center;
     background: color-mix(in oklch, var(--bs-secondary-bg, #e9ecef) 82%, transparent) !important;
     border: 1px solid color-mix(in oklch, currentColor 20%, transparent) !important;
