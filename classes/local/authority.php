@@ -30,12 +30,12 @@ final class authority {
         $class = self::component() === 'local_menubuilder' ? '\local_menubuilder\menu' : '\local_frontpage\menu';
         $info = class_exists($class) ? $class::source_info($source) : null;
         if ($info !== null) {
-            return $info + ['authority' => self::component()];
+            return array_merge($info, ['authority' => self::component()]);
         }
         // Published Frontpage segment sources have no Standalone equivalent; preserve existing block assignments.
         if ($class !== '\local_frontpage\menu' && class_exists('\local_frontpage\menu')) {
             $info = \local_frontpage\menu::source_info($source);
-            return $info === null ? null : $info + ['authority' => 'local_frontpage'];
+            return $info === null ? null : array_merge($info, ['authority' => 'local_frontpage']);
         }
         return null;
     }
