@@ -9,7 +9,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_frontpage_menu';
-$plugin->version = 2026092800;
+$plugin->version = 2026100900;
 $plugin->requires = 2024100700; // Moodle 4.5.
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = '0.8.4-beta';
+$plugin->release = '0.9.0-beta';
