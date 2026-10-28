@@ -1,5 +1,12 @@
 <?php
 /**
+ * This file is part of a 108design source-available software product.
+ *
+ * Use and modification are permitted only under the Software License included
+ * with this distribution. See LICENSE.md for the full terms.
+ *
+ */
+/**
  * Menu Builder Block version information.
  *
  * @package block_frontpage_menu
@@ -9,7 +16,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_frontpage_menu';
-$plugin->version = 2026102502;
+$plugin->version = 2026102900;
 $plugin->requires = 2024100700; // Moodle 4.5.
 $plugin->maturity = MATURITY_BETA;
-$plugin->release = '0.11.0-beta';
+$plugin->release = '0.12.0-beta';
