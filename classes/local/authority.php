@@ -75,6 +75,10 @@ final class authority {
 
     public static function require_authoring(): void {
         if (self::component() === 'local_menubuilder') {
+            if (method_exists(\local_menubuilder\local\authority::class, 'source_selection_available')
+                    && \local_menubuilder\local\authority::source_selection_available()) {
+                return;
+            }
             \local_menubuilder\local\gate::require_authoring();
             return;
         }

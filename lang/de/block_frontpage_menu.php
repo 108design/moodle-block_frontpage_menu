@@ -11,7 +11,7 @@
  * @copyright 2026 Andreas Giesen <andreas@108design.com>
  * @license   108design source-available software license; see LICENSE.md
  */
-$string['pluginname'] = 'Frontpage-Menü';
+$string['pluginname'] = 'Menübuilder-Block';
 $string['title'] = 'Blocktitel';
 $string['menu'] = 'Menüquelle';
 $string['style'] = 'Menüstil';
@@ -28,16 +28,42 @@ $string['sourcesegment'] = 'Segment';
 $string['sourcelinkedsegment'] = 'Verknüpftes Segment';
 $string['configuresource'] = 'Menü konfigurieren';
 $string['configure'] = 'Block konfigurieren';
-$string['notconfigured'] = 'Für diesen Block wurde noch kein Frontpage-Menü ausgewählt.';
+$string['notconfigured'] = 'Wählen Sie ein Menü aus dem Menübuilder für diesen Block aus.';
 $string['novisibleentries'] = 'Das ausgewählte Menü hat in der aktuellen Ansicht keine sichtbaren Einträge.';
-$string['frontpageunavailable'] = 'Die Frontpage-Menüintegration ist derzeit nicht verfügbar.';
-$string['privacy:metadata'] = 'Der Frontpage-Menüblock speichert keine personenbezogenen Daten.';
-$string['frontpage_menu:addinstance'] = 'Frontpage-Menüblock hinzufügen';
-$string['frontpage_menu:myaddinstance'] = 'Frontpage-Menüblock zum Dashboard hinzufügen';
-$string['authorityunavailable'] = 'Installieren Sie Frontpage oder den eigenständigen Menübuilder, bevor Sie diesen Block konfigurieren.';
+$string['frontpageunavailable'] = 'Die Menübuilder-Anbindung ist derzeit nicht verfügbar.';
+$string['privacy:metadata'] = 'Der Menübuilder-Block speichert keine personenbezogenen Daten.';
+$string['frontpage_menu:addinstance'] = 'Menübuilder-Block hinzufügen';
+$string['frontpage_menu:myaddinstance'] = 'Menübuilder-Block zum Dashboard hinzufügen';
+$string['authorityunavailable'] = 'Richten Sie den Menübuilder ein, bevor Sie diesen Block konfigurieren.';
 $string['paddingcompact'] = 'Kompakt';
 $string['paddingnormal'] = 'Normal';
 $string['paddingspacious'] = 'Großzügig';
+
+$string['pagehelp_menus_title'] = 'Menüblock-Hilfe';
+$string['pagehelp_more'] = 'Mehr dazu im Hilfepanel';
+$string['contexthelptopics'] = 'Hilfethemen';
+$string['pagehelp_blocksource'] = 'Menüquelle';
+$string['pagehelp_blocksource_help'] = ('Der Block verweist auf die aktuelle zentrale Definition. Bearbeite das Menü '
+    . 'über seinen Quellverweis.');
+$string['pagehelp_blocksource_article'] = ('<p>Wähle das zentrale Menü für die Ausgabe. Mehrere Blöcke dürfen '
+    . 'denselben Schlüssel verwenden; Änderungen am zentralen Menü erscheinen in '
+    . 'jedem Block. Der Quellhost bestimmt Menüstruktur und Sichtbarkeit.</p><p>Die '
+    . 'Quellauswahl zeigt die Menüs des aktiven Anbieters. Der Block speichert den '
+    . 'Quellverweis und kopiert keine Inhalte. Fehlt die Quelle oder bleibt sie nach '
+    . 'der Sichtbarkeitsprüfung leer, sehen gewöhnliche Nutzer kein Menü; '
+    . 'Bearbeiter erhalten einen Konfigurationshinweis.</p>');
+$string['pagehelp_blockprofile'] = 'Profil und Dichte';
+$string['pagehelp_blockprofile_help'] = ('Wähle Kompakt für vertikale oder Breit für horizontale Ausgabe. Richte '
+    . 'Dich nach dem tatsächlich verfügbaren Platz Deines Themes.');
+$string['pagehelp_blockprofile_article'] = (
+        '<p><strong>Kompaktes vertikales Menü</strong> hält Zweige untereinander im '
+    . 'Block. <strong>Breites horizontales Menü</strong> verteilt die obersten '
+    . 'Einträge über die verfügbare Breite. Dein Theme bestimmt die Blockregionen '
+    . 'und deren tatsächliche Breite.</p><p><strong>Dichte</strong> ändert die '
+    . 'Abstände. Das Profil verändert weder die zentrale Definition noch deren '
+    . 'Sichtbarkeitsbedingungen oder die Ausgabe in anderen Blöcken.</p>'
+    );
+$string['density_help'] = 'Passe die Abstände um das Menü an: Kompakt, Normal oder Großzügig.';
 
 // Shared independent signed update protection.
 $string['updateguard_heading'] = 'Update angehalten';

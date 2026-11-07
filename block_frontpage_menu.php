@@ -42,8 +42,6 @@ final class block_frontpage_menu extends block_base {
     }
 
     public function get_content(): stdClass {
-        global $PAGE;
-
         if ($this->content !== null) {
             return $this->content;
         }
@@ -73,7 +71,7 @@ final class block_frontpage_menu extends block_base {
         $amdcomponent = (string) ($sourceinfo['authority'] ??
             \block_frontpage_menu\local\authority::amd_component());
         if ($amdcomponent !== '') {
-            $PAGE->requires->js_call_amd($amdcomponent . '/menu', 'init');
+            $this->page->requires->js_call_amd($amdcomponent . '/menu', 'init');
         }
         $rendered = \block_frontpage_menu\local\authority::render_source($source, $options);
         $this->content->text = trim($rendered) !== '' ? $rendered : $this->editing_placeholder(

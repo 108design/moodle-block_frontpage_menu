@@ -11,7 +11,7 @@
  * @copyright 2026 Andreas Giesen <andreas@108design.com>
  * @license   108design source-available software license; see LICENSE.md
  */
-$string['pluginname'] = 'Frontpage menu';
+$string['pluginname'] = 'Menu Builder Block';
 $string['title'] = 'Block title';
 $string['menu'] = 'Menu source';
 $string['style'] = 'Menu style';
@@ -28,16 +28,43 @@ $string['sourcesegment'] = 'Segment';
 $string['sourcelinkedsegment'] = 'Linked segment';
 $string['configuresource'] = 'Configure menu';
 $string['configure'] = 'Configure block';
-$string['notconfigured'] = 'No Frontpage menu has been selected for this block yet.';
+$string['notconfigured'] = 'Select a Menu Builder menu for this block.';
 $string['novisibleentries'] = 'The selected menu has no visible entries in the current view.';
-$string['frontpageunavailable'] = 'The Frontpage menu integration is currently unavailable.';
-$string['privacy:metadata'] = 'The Frontpage menu block stores no personal data.';
-$string['frontpage_menu:addinstance'] = 'Add a Frontpage menu block';
-$string['frontpage_menu:myaddinstance'] = 'Add a Frontpage menu block to Dashboard';
-$string['authorityunavailable'] = 'Install either Frontpage or the plugin Menu Builder before configuring this block.';
+$string['frontpageunavailable'] = 'The Menu Builder integration is currently unavailable.';
+$string['privacy:metadata'] = 'The Menu Builder Block stores no personal data.';
+$string['frontpage_menu:addinstance'] = 'Add a Menu Builder block';
+$string['frontpage_menu:myaddinstance'] = 'Add a Menu Builder block to the dashboard';
+$string['authorityunavailable'] = 'Set up Menu Builder before configuring this block.';
 $string['paddingcompact'] = 'Compact';
 $string['paddingnormal'] = 'Normal';
 $string['paddingspacious'] = 'Spacious';
+
+$string['pagehelp_menus_title'] = 'Menu Block Help';
+$string['pagehelp_more'] = 'More in the help panel';
+$string['contexthelptopics'] = 'Help Topics';
+$string['pagehelp_blocksource'] = 'Menu Source';
+$string['pagehelp_blocksource_help'] = 'The block references the current central definition. Use its source link to edit that menu.';
+$string['pagehelp_blocksource_article'] = (
+        '<p>Select the central menu to display. Multiple blocks may reference the same '
+    . 'key; changes to the central menu appear in each block. The source host '
+    . 'controls the menu structure and visibility.</p><p>The source selector lists '
+    . 'the menus offered by the active provider. The block keeps the selected source '
+    . 'reference and does not copy its content. A missing or conditionally empty '
+    . 'source produces no menu for ordinary viewers; editors see a configuration '
+    . 'placeholder.</p>'
+    );
+$string['pagehelp_blockprofile'] = 'Profile and Density';
+$string['pagehelp_blockprofile_help'] = ('Choose Compact for vertical output or Wide for horizontal output. Match the '
+    . 'actual space offered by your theme.');
+$string['pagehelp_blockprofile_article'] = (
+        '<p><strong>Compact vertical menu</strong> keeps branches stacked within the '
+    . 'block. <strong>Wide horizontal menu</strong> lays root entries across the '
+    . 'available width. Your theme determines the available block regions and their '
+    . 'actual width.</p><p><strong>Density</strong> adjusts spacing. The selected '
+    . 'profile does not change the central definition, its visibility conditions or '
+    . 'the output in other blocks.</p>'
+    );
+$string['density_help'] = 'Adjust the spacing around the menu: Compact, Normal or Spacious.';
 
 // Shared independent signed update protection.
 $string['updateguard_heading'] = 'Update stopped';

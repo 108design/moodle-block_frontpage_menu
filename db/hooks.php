@@ -24,6 +24,10 @@ $callbacks[] = [
     'hook' => \core\hook\output\before_http_headers::class,
     'callback' => [\block_frontpage_menu\local\admin_branding::class, 'prepare'],
 ];
+$callbacks[] = [
+    'hook' => \core\hook\output\before_standard_footer_html_generation::class,
+    'callback' => [\block_frontpage_menu\output\context_help::class, 'footer'],
+];
 
 // Independent signed update-package guard.
 $callbacks[] = [
