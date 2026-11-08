@@ -10,6 +10,13 @@
     min-width: 0 !important;
 }
 
+.block_frontpage_menu.block {
+    /* Keep the foreground and background paired even when a theme overrides its dropdown colours. */
+    --block-frontpage-menu-highlight-bg: #e5e8eb;
+    --block-frontpage-menu-highlight-fg: #20262c;
+    --block-frontpage-menu-chevron-bg: #f0f1f2;
+}
+
 .block_frontpage_menu .local-frontpage-menu-navigation,
 .block_frontpage_menu .local-frontpage-menu-style-floating .local-frontpage-menu-navigation {
     display: block;
@@ -75,8 +82,8 @@
 }
 
 .block_frontpage_menu.block .local-frontpage-menu-style-block :is(.nav-link, .dropdown-item):is(:hover, :focus-visible) {
-    background: var(--bs-tertiary-bg, rgba(0, 0, 0, .045));
-    color: var(--bs-primary, inherit);
+    background: var(--block-frontpage-menu-highlight-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
 }
 
 .block_frontpage_menu .local-frontpage-menu-style-block .icon {
@@ -128,7 +135,8 @@
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-trigger
     > .local-frontpage-menu-chevron {
     align-self: center;
-    background: color-mix(in oklch, var(--bs-secondary-bg, #e9ecef) 82%, transparent) !important;
+    background: var(--block-frontpage-menu-chevron-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
     border: 1px solid color-mix(in oklch, currentColor 20%, transparent) !important;
     border-radius: 0 var(--bs-border-radius, .375rem) var(--bs-border-radius, .375rem) 0 !important;
     height: 1.65rem !important;
@@ -141,8 +149,8 @@
 }
 
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-control:is(:hover, :focus-within) {
-    background: var(--bs-tertiary-bg, rgba(0, 0, 0, .045));
-    color: var(--bs-primary, inherit);
+    background: var(--block-frontpage-menu-highlight-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
 }
 
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-control:is(:hover, :focus-within)
@@ -153,7 +161,9 @@
 
 .block_frontpage_menu .local-frontpage-menu-style-block .local-frontpage-menu-parent-control:is(:hover, :focus-within)
     :is(.local-frontpage-menu-submenu-toggle, .local-frontpage-menu-chevron) {
-    background: color-mix(in oklch, currentColor 10%, var(--bs-body-bg, #fff)) !important;
+    /* Use the highlighted row's background with its inherited icon colour. */
+    background: transparent !important;
+    color: inherit !important;
     border-color: color-mix(in oklch, currentColor 25%, transparent) !important;
 }
 
@@ -272,8 +282,8 @@
 }
 
 .block_frontpage_menu.block .local-menubuilder-menu-style-block :is(.nav-link, .dropdown-item):is(:hover, :focus-visible) {
-    background: var(--bs-tertiary-bg, rgba(0, 0, 0, .045));
-    color: var(--bs-primary, inherit);
+    background: var(--block-frontpage-menu-highlight-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
 }
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .icon {
@@ -325,7 +335,8 @@
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-trigger
     > .local-menubuilder-menu-chevron {
     align-self: center;
-    background: color-mix(in oklch, var(--bs-secondary-bg, #e9ecef) 82%, transparent) !important;
+    background: var(--block-frontpage-menu-chevron-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
     border: 1px solid color-mix(in oklch, currentColor 20%, transparent) !important;
     border-radius: 0 var(--bs-border-radius, .375rem) var(--bs-border-radius, .375rem) 0 !important;
     height: 1.65rem !important;
@@ -338,8 +349,8 @@
 }
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-control:is(:hover, :focus-within) {
-    background: var(--bs-tertiary-bg, rgba(0, 0, 0, .045));
-    color: var(--bs-primary, inherit);
+    background: var(--block-frontpage-menu-highlight-bg) !important;
+    color: var(--block-frontpage-menu-highlight-fg) !important;
 }
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-control:is(:hover, :focus-within)
@@ -350,8 +361,15 @@
 
 .block_frontpage_menu .local-menubuilder-menu-style-block .local-menubuilder-menu-parent-control:is(:hover, :focus-within)
     :is(.local-menubuilder-menu-submenu-toggle, .local-menubuilder-menu-chevron) {
-    background: color-mix(in oklch, currentColor 10%, var(--bs-body-bg, #fff)) !important;
+    background: transparent !important;
+    color: inherit !important;
     border-color: color-mix(in oklch, currentColor 25%, transparent) !important;
+}
+
+.block_frontpage_menu.block :is(.local-frontpage-menu-style-block, .local-menubuilder-menu-style-block)
+    :is(.dropdown-item, .nav-link):is(.active, :active, [aria-current="page"]) {
+    color: var(--block-frontpage-menu-highlight-fg) !important;
+    background: var(--block-frontpage-menu-highlight-bg) !important;
 }
 
 .block_frontpage_menu .local-menubuilder-menu .local-menubuilder-menu-dropdown > ul,

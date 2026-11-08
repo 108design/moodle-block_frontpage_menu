@@ -16,7 +16,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_frontpage_menu';
-$plugin->version = 2026110700;
+$plugin->version = 2026110800;
 $plugin->requires = 2024100700; // Moodle 4.5.
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '1.1.0';
+$plugin->release = '1.1.1';

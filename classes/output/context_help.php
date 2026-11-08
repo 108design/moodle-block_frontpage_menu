@@ -61,7 +61,11 @@ final class context_help {
      */
     public static function initialise(): void {
         global $CFG, $PAGE;
-        $module = (int)$CFG->version < 2025041400 ? 'context_help_legacy' : 'context_help';
+        $module = match (true) {
+            (int)$CFG->version < 2025041400 => 'context_help_legacy',
+            (int)$CFG->version < 2026100500 => 'context_help',
+            default => 'context_help_53',
+        };
         $PAGE->requires->js_call_amd('block_frontpage_menu/context_help_form', 'init');
         $PAGE->requires->js_call_amd('block_frontpage_menu/' . $module, 'init', [[
             'topic' => optional_param('frontpagemenuhelp', '', PARAM_ALPHA),

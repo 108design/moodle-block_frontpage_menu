@@ -8,12 +8,15 @@
 "/amd/build" -export-ignore -export-subst
 "/amd/build/context_help.min.js" -export-ignore -export-subst
 "/amd/build/context_help.min.js.map" -export-ignore -export-subst
+"/amd/build/context_help_53.min.js" -export-ignore -export-subst
+"/amd/build/context_help_53.min.js.map" -export-ignore -export-subst
 "/amd/build/context_help_form.min.js" -export-ignore -export-subst
 "/amd/build/context_help_form.min.js.map" -export-ignore -export-subst
 "/amd/build/context_help_legacy.min.js" -export-ignore -export-subst
 "/amd/build/context_help_legacy.min.js.map" -export-ignore -export-subst
 "/amd/src" -export-ignore -export-subst
 "/amd/src/context_help.js" -export-ignore -export-subst
+"/amd/src/context_help_53.js" -export-ignore -export-subst
 "/amd/src/context_help_form.js" -export-ignore -export-subst
 "/amd/src/context_help_legacy.js" -export-ignore -export-subst
 "/block_frontpage_menu.php" -export-ignore -export-subst
@@ -30,6 +33,9 @@
 "/db/access.php" -export-ignore -export-subst
 "/db/hooks.php" -export-ignore -export-subst
 "/db/upgrade.php" -export-ignore -export-subst
+"/docs" export-ignore -export-subst
+"/docs/branding" export-ignore -export-subst
+"/docs/branding/logo.svg" export-ignore -export-subst
 "/edit_form.php" -export-ignore -export-subst
 "/lang" -export-ignore -export-subst
 "/lang/de" -export-ignore -export-subst
