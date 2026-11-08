@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/108design/moodle-block_frontpage_menu/main/docs/branding/logo.svg" alt="108design Frontpage Helpers logo" width="125" height="125">
+  <img src="https://raw.githubusercontent.com/108design/moodle-block_frontpage_menu/main/docs/branding/logo.svg" alt="108design Menu Builder Helpers logo" width="125" height="125">
 </p>
 
 # Menu Builder Block
