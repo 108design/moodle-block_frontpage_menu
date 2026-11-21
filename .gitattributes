@@ -1,6 +1,9 @@
 # Generated for the exact signed normal installation profile.
 * -export-ignore -export-subst
 "/.gitattributes" export-ignore -export-subst
+"/.github" export-ignore -export-subst
+"/.github/workflows" export-ignore -export-subst
+"/.github/workflows/ci.yml" export-ignore -export-subst
 "/.gitignore" export-ignore -export-subst
 "/LICENSE.md" -export-ignore -export-subst
 "/README.md" -export-ignore -export-subst
@@ -25,6 +28,7 @@
 "/classes/local/admin_branding.php" -export-ignore -export-subst
 "/classes/local/authority.php" -export-ignore -export-subst
 "/classes/local/update_guard.php" -export-ignore -export-subst
+"/classes/local/update_notice.php" -export-ignore -export-subst
 "/classes/output" -export-ignore -export-subst
 "/classes/output/context_help.php" -export-ignore -export-subst
 "/classes/privacy" -export-ignore -export-subst
@@ -50,6 +54,7 @@
 "/pix/helpbrand.svg" -export-ignore -export-subst
 "/release-guard-policy.json" -export-ignore -export-subst
 "/release-manifest.json" -export-ignore -export-subst
+"/release-metadata.php" -export-ignore -export-subst
 "/release-signature.txt" -export-ignore -export-subst
 "/styles" -export-ignore -export-subst
 "/styles.css" -export-ignore -export-subst
@@ -59,4 +64,5 @@
 "/tests" -export-ignore -export-subst
 "/tests/compatibility_test.php" -export-ignore -export-subst
 "/update-guard.php" -export-ignore -export-subst
+"/update-notice.php" -export-ignore -export-subst
 "/version.php" -export-ignore -export-subst
