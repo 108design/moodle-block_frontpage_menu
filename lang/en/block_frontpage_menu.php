@@ -45,26 +45,10 @@ $string['pagehelp_more'] = 'More in the help panel';
 $string['contexthelptopics'] = 'Help Topics';
 $string['pagehelp_blocksource'] = 'Menu Source';
 $string['pagehelp_blocksource_help'] = 'The block references the current central definition. Use its source link to edit that menu.';
-$string['pagehelp_blocksource_article'] = (
-        '<p>Select the central menu to display. Multiple blocks may reference the same '
-    . 'key; changes to the central menu appear in each block. The source host '
-    . 'controls the menu structure and visibility.</p><p>The source selector lists '
-    . 'the menus offered by the active provider. The block keeps the selected source '
-    . 'reference and does not copy its content. A missing or conditionally empty '
-    . 'source produces no menu for ordinary viewers; editors see a configuration '
-    . 'placeholder.</p>'
-    );
+$string['pagehelp_blocksource_article'] = '<p>Select the central menu to display. Multiple blocks may reference the same key; changes to the central menu appear in each block. The source host controls the menu structure and visibility.</p><p>The source selector lists the menus offered by the active provider. The block keeps the selected source reference and does not copy its content. A missing or conditionally empty source produces no menu for ordinary viewers; editors see a configuration placeholder.</p>';
 $string['pagehelp_blockprofile'] = 'Profile and Density';
-$string['pagehelp_blockprofile_help'] = ('Choose Compact for vertical output or Wide for horizontal output. Match the '
-    . 'actual space offered by your theme.');
-$string['pagehelp_blockprofile_article'] = (
-        '<p><strong>Compact vertical menu</strong> keeps branches stacked within the '
-    . 'block. <strong>Wide horizontal menu</strong> lays root entries across the '
-    . 'available width. Your theme determines the available block regions and their '
-    . 'actual width.</p><p><strong>Density</strong> adjusts spacing. The selected '
-    . 'profile does not change the central definition, its visibility conditions or '
-    . 'the output in other blocks.</p>'
-    );
+$string['pagehelp_blockprofile_help'] = 'Choose Compact for vertical output or Wide for horizontal output. Match the actual space offered by your theme.';
+$string['pagehelp_blockprofile_article'] = '<p><strong>Compact vertical menu</strong> keeps branches stacked within the block. <strong>Wide horizontal menu</strong> lays root entries across the available width. Your theme determines the available block regions and their actual width.</p><p><strong>Density</strong> adjusts spacing. The selected profile does not change the central definition, its visibility conditions or the output in other blocks.</p>';
 $string['density_help'] = 'Adjust the spacing around the menu: Compact, Normal or Spacious.';
 
 // Shared independent signed update protection.
@@ -85,3 +69,12 @@ $string['updateguard_operation'] = 'This combination of installation actions is 
 $string['updateguard_failed'] = 'The update could not be verified. No installation was started.';
 $string['updateguard_back'] = 'Return to plugin overview';
 // End shared independent signed update protection.
+
+// Optional information before native package confirmation.
+$string['updateinfo_heading'] = 'Package information: {$a}';
+$string['updateinfo_verified'] = 'The embedded publisher record matches the installed release line.';
+$string['updateinfo_missing'] = 'This package has no embedded publisher verification record.';
+$string['updateinfo_line'] = 'This package identifies a different release line from the installed plugin.';
+$string['updateinfo_mismatch'] = 'The embedded publisher record could not be verified against the installed plugin\'s publisher information.';
+$string['updateinfo_unavailable'] = 'Publisher information for the selected package could not be read.';
+$string['updateinfo_choice'] = 'Review the package source and Moodle\'s validation details before continuing. Use "{$a}" below to cancel.';

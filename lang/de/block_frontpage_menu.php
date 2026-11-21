@@ -44,26 +44,11 @@ $string['pagehelp_menus_title'] = 'Menüblock-Hilfe';
 $string['pagehelp_more'] = 'Mehr dazu im Hilfepanel';
 $string['contexthelptopics'] = 'Hilfethemen';
 $string['pagehelp_blocksource'] = 'Menüquelle';
-$string['pagehelp_blocksource_help'] = ('Der Block verweist auf die aktuelle zentrale Definition. Bearbeite das Menü '
-    . 'über seinen Quellverweis.');
-$string['pagehelp_blocksource_article'] = ('<p>Wähle das zentrale Menü für die Ausgabe. Mehrere Blöcke dürfen '
-    . 'denselben Schlüssel verwenden; Änderungen am zentralen Menü erscheinen in '
-    . 'jedem Block. Der Quellhost bestimmt Menüstruktur und Sichtbarkeit.</p><p>Die '
-    . 'Quellauswahl zeigt die Menüs des aktiven Anbieters. Der Block speichert den '
-    . 'Quellverweis und kopiert keine Inhalte. Fehlt die Quelle oder bleibt sie nach '
-    . 'der Sichtbarkeitsprüfung leer, sehen gewöhnliche Nutzer kein Menü; '
-    . 'Bearbeiter erhalten einen Konfigurationshinweis.</p>');
+$string['pagehelp_blocksource_help'] = 'Der Block verweist auf die aktuelle zentrale Definition. Bearbeite das Menü über seinen Quellverweis.';
+$string['pagehelp_blocksource_article'] = '<p>Wähle das zentrale Menü für die Ausgabe. Mehrere Blöcke dürfen denselben Schlüssel verwenden; Änderungen am zentralen Menü erscheinen in jedem Block. Der Quellhost bestimmt Menüstruktur und Sichtbarkeit.</p><p>Die Quellauswahl zeigt die Menüs des aktiven Anbieters. Der Block speichert den Quellverweis und kopiert keine Inhalte. Fehlt die Quelle oder bleibt sie nach der Sichtbarkeitsprüfung leer, sehen gewöhnliche Nutzer kein Menü; Bearbeiter erhalten einen Konfigurationshinweis.</p>';
 $string['pagehelp_blockprofile'] = 'Profil und Dichte';
-$string['pagehelp_blockprofile_help'] = ('Wähle Kompakt für vertikale oder Breit für horizontale Ausgabe. Richte '
-    . 'Dich nach dem tatsächlich verfügbaren Platz Deines Themes.');
-$string['pagehelp_blockprofile_article'] = (
-        '<p><strong>Kompaktes vertikales Menü</strong> hält Zweige untereinander im '
-    . 'Block. <strong>Breites horizontales Menü</strong> verteilt die obersten '
-    . 'Einträge über die verfügbare Breite. Dein Theme bestimmt die Blockregionen '
-    . 'und deren tatsächliche Breite.</p><p><strong>Dichte</strong> ändert die '
-    . 'Abstände. Das Profil verändert weder die zentrale Definition noch deren '
-    . 'Sichtbarkeitsbedingungen oder die Ausgabe in anderen Blöcken.</p>'
-    );
+$string['pagehelp_blockprofile_help'] = 'Wähle Kompakt für vertikale oder Breit für horizontale Ausgabe. Richte Dich nach dem tatsächlich verfügbaren Platz Deines Themes.';
+$string['pagehelp_blockprofile_article'] = '<p><strong>Kompaktes vertikales Menü</strong> hält Zweige untereinander im Block. <strong>Breites horizontales Menü</strong> verteilt die obersten Einträge über die verfügbare Breite. Dein Theme bestimmt die Blockregionen und deren tatsächliche Breite.</p><p><strong>Dichte</strong> ändert die Abstände. Das Profil verändert weder die zentrale Definition noch deren Sichtbarkeitsbedingungen oder die Ausgabe in anderen Blöcken.</p>';
 $string['density_help'] = 'Passe die Abstände um das Menü an: Kompakt, Normal oder Großzügig.';
 
 // Shared independent signed update protection.
@@ -84,3 +69,12 @@ $string['updateguard_operation'] = 'Diese Kombination von Installationsaktionen 
 $string['updateguard_failed'] = 'Das Update konnte nicht geprüft werden. Es wurde keine Installation gestartet.';
 $string['updateguard_back'] = 'Zur Pluginübersicht';
 // End shared independent signed update protection.
+
+// Optional information before native package confirmation.
+$string['updateinfo_heading'] = 'Paketinformationen: {$a}';
+$string['updateinfo_verified'] = 'Der eingebettete Herausgebernachweis passt zur installierten Ausgabe.';
+$string['updateinfo_missing'] = 'Dieses Paket enthält keinen eingebetteten Herausgebernachweis.';
+$string['updateinfo_line'] = 'Dieses Paket gehört zu einer anderen Ausgabe als das installierte Plugin.';
+$string['updateinfo_mismatch'] = 'Der eingebettete Herausgebernachweis konnte mit den Angaben des installierten Plugins nicht bestätigt werden.';
+$string['updateinfo_unavailable'] = 'Die Herausgeberinformationen für das ausgewählte Paket konnten nicht gelesen werden.';
+$string['updateinfo_choice'] = 'Kontrolliere vor dem Fortfahren die Paketquelle und Moodles Prüfergebnisse. Mit „{$a}“ unten kannst Du abbrechen.';
