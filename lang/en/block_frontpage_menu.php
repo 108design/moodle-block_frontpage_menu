@@ -12,6 +12,7 @@
  * @copyright 2026 Andreas Giesen <andreas@108design.com>
  * @license   108design source-available software license; see LICENSE.md
  */
+
 $string['pluginname'] = 'Menu Builder Block';
 $string['title'] = 'Block title';
 $string['menu'] = 'Menu source';
@@ -22,7 +23,7 @@ $string['fixedstyle'] = 'Compact block menu';
 $string['profilecompact'] = 'Compact vertical menu';
 $string['profilewide'] = 'Wide horizontal menu';
 $string['profile_help'] = 'Use the compact profile in a side region. Wide profiles are intended for full-width content regions.';
-$string['invalidprofile'] = 'The selected menu profile is invalid.';
+$string['invalidprofile'] = 'The selected menu profile is not valid.';
 $string['invalidsource'] = 'The selected menu source is no longer available.';
 $string['sourcecentral'] = 'Central';
 $string['sourcesegment'] = 'Segment';
@@ -39,19 +40,16 @@ $string['authorityunavailable'] = 'Set up Menu Builder before configuring this b
 $string['paddingcompact'] = 'Compact';
 $string['paddingnormal'] = 'Normal';
 $string['paddingspacious'] = 'Spacious';
-
-$string['pagehelp_menus_title'] = 'Menu Block Help';
+$string['pagehelp_menus_title'] = 'Menu block help';
 $string['pagehelp_more'] = 'More in the help panel';
-$string['contexthelptopics'] = 'Help Topics';
-$string['pagehelp_blocksource'] = 'Menu Source';
+$string['contexthelptopics'] = 'Help topics';
+$string['pagehelp_blocksource'] = 'Menu source';
 $string['pagehelp_blocksource_help'] = 'The block references the current central definition. Use its source link to edit that menu.';
 $string['pagehelp_blocksource_article'] = '<p>Select the central menu to display. Multiple blocks may reference the same key; changes to the central menu appear in each block. The source host controls the menu structure and visibility.</p><p>The source selector lists the menus offered by the active provider. The block keeps the selected source reference and does not copy its content. A missing or conditionally empty source produces no menu for ordinary viewers; editors see a configuration placeholder.</p>';
-$string['pagehelp_blockprofile'] = 'Profile and Density';
-$string['pagehelp_blockprofile_help'] = 'Choose Compact for vertical output or Wide for horizontal output. Match the actual space offered by your theme.';
+$string['pagehelp_blockprofile'] = 'Profile and density';
+$string['pagehelp_blockprofile_help'] = 'Choose compact for vertical output or wide for horizontal output. Match the actual space offered by your theme.';
 $string['pagehelp_blockprofile_article'] = '<p><strong>Compact vertical menu</strong> keeps branches stacked within the block. <strong>Wide horizontal menu</strong> lays root entries across the available width. Your theme determines the available block regions and their actual width.</p><p><strong>Density</strong> adjusts spacing. The selected profile does not change the central definition, its visibility conditions or the output in other blocks.</p>';
-$string['density_help'] = 'Adjust the spacing around the menu: Compact, Normal or Spacious.';
-
-// Shared independent signed update protection.
+$string['density_help'] = 'Adjust the spacing around the menu: compact, normal or Spacious.';
 $string['updateguard_heading'] = 'Update stopped';
 $string['updateguard_component'] = 'The package for {$a} was rejected.';
 $string['updateguard_hint'] = 'Use an approved package for the installed edition. You can review the operation again.';
@@ -68,9 +66,6 @@ $string['updateguard_installed'] = 'The installed update protection is incomplet
 $string['updateguard_operation'] = 'This combination of installation actions is not supported. Start a single update operation again.';
 $string['updateguard_failed'] = 'The update could not be verified. No installation was started.';
 $string['updateguard_back'] = 'Return to plugin overview';
-// End shared independent signed update protection.
-
-// Optional information before native package confirmation.
 $string['updateinfo_heading'] = 'Package information: {$a}';
 $string['updateinfo_verified'] = 'The embedded publisher record matches the installed release line.';
 $string['updateinfo_missing'] = 'This package has no embedded publisher verification record.';
