@@ -46,6 +46,8 @@
 "/lang" -export-ignore -export-subst
 "/lang/de" -export-ignore -export-subst
 "/lang/de/block_frontpage_menu.php" -export-ignore -export-subst
+"/lang/de_du" -export-ignore -export-subst
+"/lang/de_du/block_frontpage_menu.php" -export-ignore -export-subst
 "/lang/en" -export-ignore -export-subst
 "/lang/en/block_frontpage_menu.php" -export-ignore -export-subst
 "/lib.php" -export-ignore -export-subst
